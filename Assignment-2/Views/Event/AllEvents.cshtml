@@ -1,0 +1,32 @@
+﻿@model List<EventViewModel>
+
+
+<div class="text-center">
+	<h1 class="display-4">All Events</h1>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Event Name</th>
+					<th>Description</th>
+					<th>Date</th>
+					<th>Address</th>
+			         <th>Assigned User</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (EventViewModel eventItem in Model)
+				{
+					<tr>
+						<td>@eventItem.Name</td>
+						<td>@eventItem.Description</td>
+						<td>@eventItem.Date.ToString("MM/dd/yyyy")</td>
+						<td>@eventItem.Address</td>
+						<td>@eventItem.Assigneduser</td>
+						
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>

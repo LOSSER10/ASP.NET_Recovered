@@ -1,0 +1,29 @@
+﻿@model List<UserViewModel>
+<div class="text-center">
+	<h1 class="display-4">All Events</h1>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>s
+					<th>FirstName</th>
+					<th>LastName</th>
+					<th>ContactNumberr</th>
+					<th>Email</th>
+					<th>UserType</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (UserViewModel eventItem in Model)
+				{
+					<tr>
+						<td>@eventItem.FirstName</td>
+						<td>@eventItem.LastName.</td>
+						<td>@eventItem.ContactNumber</td>
+						<td>@eventItem.Email</td>
+						<td>@eventItem.UserType</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
